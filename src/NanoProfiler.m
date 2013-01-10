@@ -20,8 +20,8 @@
     return [NSString stringWithFormat:@"%@_%@",NSStringFromClass(clazz), NSStringFromSelector(selector)];
 }
 
-+(BOOL) addProfiler:(Class) target andSelector:(SEL) selector {
-    return [TheWrapper addWrapperto:target andSelector:selector withPreRunBlock:^(va_list args)
++(void) addProfiler:(Class) target andSelector:(SEL) selector {
+    [TheWrapper addWrapperto:target andSelector:selector withPreRunBlock:^(va_list args)
     {
         [ProfilingService startTimer:[NanoProfiler getTimerNameForClass:target andSelector:selector]];
     }
