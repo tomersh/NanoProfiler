@@ -12,6 +12,6 @@
 
 @interface NanoProfiler : NSObject
 
-+(BOOL) addProfiler:(id) object andSelector:(SEL) selector;
++(BOOL) addProfiler:(Class) target andSelector:(SEL) selector;
 
 @end
