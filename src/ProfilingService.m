@@ -1,6 +1,5 @@
 //
 //  ProfilingService.m
-//  test
 //
 //  Created by Tomer Shiri on 1/10/13.
 //  Copyright (c) 2013 Tomer Shiri. All rights reserved.

@@ -21,7 +21,7 @@
 }
 
 +(void) addProfiler:(Class) target andSelector:(SEL) selector {
-    [TheWrapper addWrapperto:target andSelector:selector withPreRunBlock:^(va_list args)
+    [TheWrapper addWrappertoClass:target andSelector:selector withPreRunBlock:^(va_list args)
     {
         [ProfilingService startTimer:[NanoProfiler getTimerNameForClass:target andSelector:selector]];
     }

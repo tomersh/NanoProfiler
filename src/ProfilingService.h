@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define AddProfiler(target, selector) [NanoProfiler addProfiler:(target) andSelector:(selector)];
+
 @interface ProfilingService : NSObject
 
 +(void) startTimer:(NSString*)named;
